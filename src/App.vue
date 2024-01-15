@@ -1,18 +1,21 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { useHistoryStore } from '@/stores/historyStore';
+import FileComponent from '@/components/FileComponent.vue';
+import StatisticsComponent from '@/components/StatisticsComponent.vue';
+import dayjs from 'dayjs';
+import 'dayjs/locale/pl';
+import Footer from '@/components/Footer.vue';
 
-const fileRef = ref<File | null>(null)
-
-const handleJsonUpload = (event: Event) => {
-  const files = (event.target as HTMLInputElement).files
-  if (files && files.length > 0) {
-    fileRef.value = files[0]
-  }
-}
+dayjs.locale('pl');
+const historyStore = useHistoryStore();
 </script>
 
 <template>
-  <div>
-    <input type="file" :value="fileRef" @change="handleJsonUpload" />
-  </div>
+  <main class="flex flex-col items-center justify-center min-h-screen py-12 px-4 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-black mb-8">LekkieStatystyki</h1>
+    <FileComponent v-if="!historyStore.history" />
+    <StatisticsComponent v-else />
+  </main>
+
+  <Footer />
 </template>

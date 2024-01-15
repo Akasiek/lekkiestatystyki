@@ -11,7 +11,7 @@ const historyStore = useHistoryStore();
 </script>
 
 <template>
-  <main class="flex flex-col items-center justify-center min-h-screen py-12 px-4 max-w-4xl mx-auto">
+  <main class="flex flex-col items-center justify-center min-h-svh py-12 px-4 max-w-4xl mx-auto">
     <h1 class="text-4xl font-black mb-8">LekkieStatystyki</h1>
     <FileComponent v-if="!historyStore.history" />
     <StatisticsComponent v-else />

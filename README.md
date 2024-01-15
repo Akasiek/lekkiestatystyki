@@ -20,11 +20,11 @@ Aplikacja nie przechowuje żadnych danych, które użytkownik wprowadza w formul
 
    <img src="https://github.com/Akasiek/lekkiestatystyki/assets/37307597/ee35c811-d599-4104-bdb6-9acd3bfb2f89" alt="" width="360px" />
 
-6. Wejdź w "Multiple formats", znajdź sekcję "history". Zmień format "HTML" na "JSON" i kliknij "OK"
+5. Wejdź w "Multiple formats", znajdź sekcję "history". Zmień format "HTML" na "JSON" i kliknij "OK"
 
    <img src="https://github.com/Akasiek/lekkiestatystyki/assets/37307597/e90c3a3d-9370-403e-9f10-b3e4a6d09257" alt="" width="360px" />
     
-8. Kliknij "Next step"
-9. Zmień "File size" na jak największą wartość. Eksport nie powinien przekroczyć nawet 1GB, ale dla pewności zalecam ustawić jak największą wartość.
-10. Gdy eksport się zakończy, rozpakuj pobrany plik i znajdź w nim plik `watch-history.json` (`Takeout\YouTube and YouTube Music\history\watch-history.json`)
-11. Wczytaj plik do aplikacji
+6. Kliknij "Next step"
+7. Zmień "File size" na jak największą wartość. Eksport nie powinien przekroczyć nawet 1GB, ale dla pewności zalecam ustawić jak największą wartość.
+8. Gdy eksport się zakończy, rozpakuj pobrany plik i znajdź w nim plik `watch-history.json` (`Takeout\YouTube and YouTube Music\history\watch-history.json`)
+9. Wczytaj plik do aplikacji

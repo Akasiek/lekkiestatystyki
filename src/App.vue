@@ -12,8 +12,7 @@ const handleJsonUpload = (event: Event) => {
 </script>
 
 <template>
-  <div class="bg-amber-300 w-screen h-screen">
-    <!--    <input type="file" :value="fileRef" @change="handleJsonUpload" />-->
-    TESt
+  <div>
+    <input type="file" :value="fileRef" @change="handleJsonUpload" />
   </div>
 </template>

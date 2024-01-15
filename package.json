@@ -13,7 +13,6 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@vueform/vueform": "^1.6.6",
     "pinia": "^2.1.7",
     "vue": "^3.3.11"
   },

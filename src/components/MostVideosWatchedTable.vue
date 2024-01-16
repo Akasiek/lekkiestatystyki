@@ -6,7 +6,7 @@ import TableComponent from '@/components/TableComponent.vue';
 
 const historyStore = useHistoryStore();
 
-const grouped = groupByTitles(historyStore.history as IHistoryElement[]).slice(0, 5);
+const grouped = groupByTitles(historyStore.history as IHistoryElement[]).slice(0, 10);
 
 const data = grouped.map((items) => {
   return {
@@ -26,7 +26,7 @@ const data = grouped.map((items) => {
 </script>
 
 <template>
-  <TableComponent :data="data" :labels="['Tytuł', 'Liczba wyświetleń']" title="Top 5 filmów" />
+  <TableComponent :data="data" :labels="['Tytuł', 'Liczba wyświetleń']" title="Top 10 filmów" />
 </template>
 
 <style scoped></style>

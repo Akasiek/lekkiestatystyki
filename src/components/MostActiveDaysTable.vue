@@ -7,7 +7,7 @@ import dayjs from 'dayjs';
 
 const historyStore = useHistoryStore();
 
-const grouped = groupByDay(historyStore.history as IHistoryElement[]).slice(0, 5);
+const grouped = groupByDay(historyStore.history as IHistoryElement[]).slice(0, 10);
 
 const data = grouped.map((items) => {
   return {
@@ -26,7 +26,7 @@ const data = grouped.map((items) => {
 </script>
 
 <template>
-  <TableComponent :data="data" :labels="['Dzień', 'Ilość filmów']" title="Top 5 aktywnych dni" />
+  <TableComponent :data="data" :labels="['Dzień', 'Ilość filmów']" title="Top 10 aktywnych dni" />
 </template>
 
 <style scoped></style>

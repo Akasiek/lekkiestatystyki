@@ -15,6 +15,10 @@ const historyStore = useHistoryStore();
       <h1 class="text-center text-5xl my-4">
         Wszystkie filmy: <i>{{ (historyStore.history as IHistoryElement[]).length }}</i>
       </h1>
+      <h2 class="text-center text-3xl my-6 font-black">
+        Unikalnych filmów:
+        <i>{{ groupByTitles(historyStore.history as IHistoryElement[]).length }}</i>
+      </h2>
       <p class="text-center italic text-sm">
         {{ getSubtextFromVideoCount((historyStore.history as IHistoryElement[]).length) }}
       </p>

@@ -31,14 +31,14 @@ const fixTitle = (title: string): string => {
 };
 
 export const getSubtextFromVideoCount = (count: number): string => {
-  if (count < 100) {
-    return 'Musisz dużo nadrobić!';
-  } else if (count < 250) {
-    return 'Nie jest źle, ale dalej jesteś w tyle!';
+  if (count < 200) {
+    return 'Sezonowiec...';
   } else if (count < 500) {
-    return 'Już wiesz za dużo...';
+    return 'Zaczynasz łączyć kropki...';
+  } else if (count < 1000) {
+    return 'Nie ma już dla Ciebie ratunku...';
   } else if (count < 2000) {
-    return 'Nie ma już ratunku...';
+    return 'Twoja psychika jest nie do uratowania...';
   }
 
   return 'Lecz się...';

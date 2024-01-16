@@ -2,7 +2,7 @@
 const { data } = defineProps<{
   title: string;
   labels: string[];
-  data: { cells: { value: string | number; isBold: boolean }[] }[];
+  data: { cells: { value: string | number; isBold: boolean; link?: string }[] }[];
 }>();
 </script>
 
@@ -30,9 +30,13 @@ const { data } = defineProps<{
               scope="row"
               class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white pr-4"
             >
-              {{ cell.value }}
+              <a :href="cell.link" v-if="cell.link" target="_blank"> {{ cell.value }} </a>
+              <span v-else> {{ cell.value }} </span>
             </th>
-            <td v-else class="px-6 py-4">{{ cell.value }}</td>
+            <td v-else class="px-6 py-4">
+              <a :href="cell.link" v-if="cell.link" target="_blank"> {{ cell.value }} </a>
+              <span v-else> {{ cell.value }} </span>
+            </td>
           </template>
         </tr>
       </tbody>

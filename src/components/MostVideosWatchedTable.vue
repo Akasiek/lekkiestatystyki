@@ -13,7 +13,8 @@ const data = grouped.map((items) => {
     cells: [
       {
         value: items.title,
-        isBold: false
+        isBold: false,
+        link: items.link
       },
       {
         value: items.count,

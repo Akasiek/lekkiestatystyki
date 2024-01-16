@@ -44,8 +44,10 @@ export const getSubtextFromVideoCount = (count: number): string => {
   return 'Lecz się...';
 };
 
-export const groupByTitles = (history: IHistoryElement[]): { title: string; count: number }[] => {
-  const titles: { title: string; count: number }[] = [];
+export const groupByTitles = (
+  history: IHistoryElement[]
+): { title: string; count: number; link: string }[] => {
+  const titles: { title: string; count: number; link: string }[] = [];
 
   history.forEach((element) => {
     const title = fixTitle(element.title);
@@ -54,7 +56,7 @@ export const groupByTitles = (history: IHistoryElement[]): { title: string; coun
       const index = titles.findIndex((t) => t.title === title);
       titles[index].count++;
     } else {
-      titles.push({ title, count: 1 });
+      titles.push({ title, count: 1, link: element.titleUrl });
     }
   });
 

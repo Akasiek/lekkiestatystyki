@@ -1,4 +1,4 @@
-# Lekkiestatystyki
+# LekkieStatystyki
 
 LekkieStatystyki to strona, która pozwala na wyświetlanie prywatnych statystyk związanych z kanałem Lekko Stronniczy na YouTube.
 

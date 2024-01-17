@@ -13,7 +13,7 @@ Aplikacja nie przechowuje żadnych danych, które użytkownik wprowadza w formul
 - Top dzień, w którym oglądałeś najwięcej filmów
 - Statystyki oglądania filmów w ciągu tygodnia
 
-# Jak pobierać statystyki?
+# Jak wyeksportować plik
 
 1. Wejdź na stronę [Google Takeout](https://takeout.google.com/settings/takeout)
 2. Odznacz wszystkie usługi

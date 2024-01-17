@@ -34,8 +34,16 @@ const handleJsonUpload = (event: Event) => {
       class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
       placeholder="Nie wgrano pliku"
     />
+
+    <small class="mt-4 block text-gray-600">
+      Instrukcja jak wyeksportować historię oglądanych filmów z YouTube znajduje się
+      <a
+        href="https://github.com/Akasiek/lekkiestatystyki#jak-wyeksportowa%C4%87-plik"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-blue-500 hover:underline"
+        >tutaj</a
+      >.
+    </small>
   </div>
 </template>
-
-<style scoped></style>
-<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />

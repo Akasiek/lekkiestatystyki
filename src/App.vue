@@ -6,9 +6,9 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/pl';
 import Footer from '@/components/Footer.vue';
 import { SpeedInsights } from '@vercel/speed-insights/vue';
-import { inject } from '@vercel/analytics';
-
-inject();
+// import { inject } from '@vercel/analytics';
+//
+// inject();
 
 dayjs.locale('pl');
 const historyStore = useHistoryStore();

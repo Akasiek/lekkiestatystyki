@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { IHistoryElement } from '@/interfaces/IHistoryElement';
-import { getSubtextFromVideoCount, groupByTitles } from '@/utils';
+import { getProcentOfAllVideos, getSubtextFromVideoCount, groupByTitles } from '@/utils';
 import { useHistoryStore } from '@/stores/historyStore';
 import DayOfTheWeekChart from '@/components/DayOfTheWeekChart.vue';
 import MostVideosWatchedTable from '@/components/MostVideosWatchedTable.vue';
@@ -28,15 +28,14 @@ const historyStore = useHistoryStore();
         <span>Procent LS'ów wśród wszystkich filmów: </span>
         <span class="italic"
           >{{
-            historyStore.allVideosCount !== null
-              ? Math.round(
-                  ((historyStore.history as IHistoryElement[]).length /
-                    historyStore.allVideosCount) *
-                    100000
-                ) / 1000
+            historyStore.allVideosCount
+              ? getProcentOfAllVideos(
+                  (historyStore.history as IHistoryElement[]).length,
+                  historyStore.allVideosCount
+                )
               : 0
-          }}%</span
-        >
+          }}%
+        </span>
       </h3>
     </div>
 

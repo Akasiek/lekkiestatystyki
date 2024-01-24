@@ -99,3 +99,10 @@ export const groupByDay = (history: IHistoryElement[]): { day: string; count: nu
 
   return days.sort((a, b) => b.count - a.count);
 };
+
+export const getProcentOfAllVideos = (count: number, allVideosCount: number): number => {
+  const procent = (count / allVideosCount) * 100;
+
+  // Round to 3 decimal places
+  return Math.round(procent * 1000) / 1000;
+};

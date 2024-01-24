@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IHistoryElement } from '../interfaces/IHistoryElement';
+import type { IHistoryElement } from '@/interfaces/IHistoryElement';
 import { getSubtextFromVideoCount, groupByTitles } from '@/utils';
 import { useHistoryStore } from '@/stores/historyStore';
 import DayOfTheWeekChart from '@/components/DayOfTheWeekChart.vue';
@@ -19,9 +19,25 @@ const historyStore = useHistoryStore();
         Unikalnych filmów:
         <i>{{ groupByTitles(historyStore.history as IHistoryElement[]).length }}</i>
       </h2>
+
       <p class="text-center italic text-sm">
         {{ getSubtextFromVideoCount((historyStore.history as IHistoryElement[]).length) }}
       </p>
+
+      <h3 class="text-center font-bold text-2xl">
+        <span>Procent LS'ów wśród wszystkich filmów: </span>
+        <span class="italic"
+          >{{
+            historyStore.allVideosCount !== null
+              ? Math.round(
+                  ((historyStore.history as IHistoryElement[]).length /
+                    historyStore.allVideosCount) *
+                    100000
+                ) / 1000
+              : 0
+          }}%</span
+        >
+      </h3>
     </div>
 
     <MostVideosWatchedTable />

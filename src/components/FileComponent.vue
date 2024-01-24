@@ -14,6 +14,7 @@ const handleJsonUpload = (event: Event) => {
       const result = event.target?.result;
       if (typeof result === 'string') {
         const json = JSON.parse(result);
+        historyStore.setAllVideosCount(filterVideosWithChannelNames(json).length);
         historyStore.setHistory(filterLSVideosFromHistory(filterVideosWithChannelNames(json)));
       }
     };

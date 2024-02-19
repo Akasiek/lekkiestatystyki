@@ -5,7 +5,7 @@
         Wykonał
         <a href="https://kamilpomykala.dev" target="_blank" class="underline hover:text-black"
           >Kamil Pomykała</a
-        >. All Rights Reserved © 2023
+        >.
       </span>
 
       <a

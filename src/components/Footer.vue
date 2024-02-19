@@ -12,7 +12,7 @@
         href="https://github.com/Akasiek/lekkiestatystyki"
         target="_blank"
         class="underline hover:text-black text-sm text-gray-500"
-        >Github</a
+        >GitHub</a
       >
     </div>
   </footer>
